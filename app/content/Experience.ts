@@ -7,14 +7,14 @@ const experience = [
     skills: [
       "React.js",
       "Next.js",
+      "JavaScript",
       "TypeScript",
       "GraphQL",
       "REST API",
       "Connect-Web",
       "Storybook",
       "Three.js",
-      "Git",
-      "JavaScript"
+      "Git"
     ],
     description: `
       Developed responsive, pixel-perfect UIs from Figma using React, Next.js, and TypeScript. 

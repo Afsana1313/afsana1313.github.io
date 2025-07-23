@@ -5,7 +5,7 @@ import intro from "../content/Intro";
 const navMenu = ["about", "experience", "projects"];
 
 const NavContent = () => {
-  const [activeMenu, setActiveMenu] = useState("");
+  const [activeMenu, setActiveMenu] = useState("about");
 
   const handleUserClick = (e: React.MouseEvent<HTMLElement>) => {
     const value = (e.target as HTMLElement).getAttribute("data-value");
