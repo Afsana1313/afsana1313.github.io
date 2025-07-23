@@ -1,20 +1,34 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import intro from "../content/Intro";
 
 const navMenu = ["about", "experience", "projects"];
 
-const navContent = navMenu.map((item) => {
-  return (
-    <li key={item}>
-      <a className="group flex items-center py-3 active" href={`#${item}`}>
-        <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-        <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
-          {item}
-        </span>
-      </a>
-    </li>
-  );
-});
+const NavContent = () => {
+  const [activeMenu, setActiveMenu] = useState("");
+
+  const handleUserClick = (e: React.MouseEvent<HTMLElement>) => {
+    const value = (e.target as HTMLElement).getAttribute("data-value");
+    console.log(activeMenu, value);
+    setActiveMenu(e.currentTarget.getAttribute("data-value") as string);
+  };
+  return navMenu.map((item) => {
+    return (
+      <li key={item} onClick={handleUserClick} data-value={`${item}`}>
+        <a className="group flex items-center py-3 active" href={`#${item}`}>
+          <span
+            className={`${
+              activeMenu == item && "w-16"
+            } nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:text-blue-950 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}
+          ></span>
+          <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-blue-950 group-focus-visible:text-slate-200">
+            {item}
+          </span>
+        </a>
+      </li>
+    );
+  });
+};
 
 const HeaderContent = () => {
   return (
@@ -24,12 +38,14 @@ const HeaderContent = () => {
           {intro.title}
         </h1>
         <div>
-          <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+          <h2 className="mt-3 text-lg font-medium tracking-tight text-blue-950 sm:text-xl">
             {intro.tagLine}
           </h2>
           <p className="mt-4 max-w-xs leading-normal">{intro.shortBio}</p>
           <nav className="nav hidden lg:block" aria-label="In-page jump links">
-            <ul className="mt-16 w-max">{navContent}</ul>
+            <ul className="mt-16 w-max">
+              <NavContent />
+            </ul>
           </nav>
         </div>
       </div>
