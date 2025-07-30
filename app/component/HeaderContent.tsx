@@ -4,32 +4,6 @@ import intro from "../content/Intro";
 
 const navMenu = ["about", "experience", "projects"];
 
-const NavContent = () => {
-  const [activeMenu, setActiveMenu] = useState("about");
-
-  const handleUserClick = (e: React.MouseEvent<HTMLElement>) => {
-    const value = (e.target as HTMLElement).getAttribute("data-value");
-    console.log(activeMenu, value);
-    setActiveMenu(e.currentTarget.getAttribute("data-value") as string);
-  };
-  return navMenu.map((item) => {
-    return (
-      <li key={item} onClick={handleUserClick} data-value={`${item}`}>
-        <a className="group flex items-center py-3 active" href={`#${item}`}>
-          <span
-            className={`${
-              activeMenu == item && "w-16"
-            } nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:text-blue-950 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}
-          ></span>
-          <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-blue-950 group-focus-visible:text-slate-200">
-            {item}
-          </span>
-        </a>
-      </li>
-    );
-  });
-};
-
 const HeaderContent = () => {
   return (
     <header className="left-container lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
@@ -51,6 +25,32 @@ const HeaderContent = () => {
       </div>
     </header>
   );
+};
+
+const NavContent = () => {
+  const [activeMenu, setActiveMenu] = useState("about");
+  const handleUserClick = (e: React.MouseEvent<HTMLElement>) => {
+    const value = (e.target as HTMLElement).getAttribute("data-value");
+    console.log(activeMenu, value);
+    setActiveMenu(e.currentTarget.getAttribute("data-value") as string);
+  };
+
+  return navMenu.map((item) => {
+    return (
+      <li key={item} onClick={handleUserClick} data-value={`${item}`}>
+        <a className="group flex items-center py-3 active" href={`#${item}`}>
+          <span
+            className={`${
+              activeMenu == item && "w-16"
+            } nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:text-blue-950 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}
+          ></span>
+          <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-blue-950 group-focus-visible:text-slate-200">
+            {item}
+          </span>
+        </a>
+      </li>
+    );
+  });
 };
 
 export default HeaderContent;

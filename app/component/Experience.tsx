@@ -3,7 +3,7 @@ import experience from "../content/Experience";
 
 const Experience = () => {
   return (
-    <div>
+    <>
       <ol className="group/list">
         {experience.map((item) => (
           <li className="mb-12" key={item.title}>
@@ -78,7 +78,7 @@ const Experience = () => {
               </span>
             </a>
           </div> */}
-    </div>
+    </>
   );
 };
 

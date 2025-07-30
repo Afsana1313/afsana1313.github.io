@@ -7,6 +7,7 @@ const Content = () => {
       <section
         id="about"
         className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+        aria-label="About Me"
       >
         Assalamu Alaikum, I’m a passionate and detail-oriented Software
         Developer based in Dhaka, Bangladesh. I specialize in crafting
@@ -28,12 +29,14 @@ const Content = () => {
       <section
         id="experience"
         className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+        aria-label="Experience"
       >
         <Experience />
       </section>
       <section
         id="projects"
         className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+        aria-label="Projects"
       >
         Apple Developed and styled interactive web apps for Apple Music,
         including the user interface of Apple Music’s embeddable web player

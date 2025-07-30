@@ -6,6 +6,7 @@ import "@fontsource/montserrat/700.css";
 import CustomCursor from "./component/CustomCursor";
 
 import "./globals.css";
+import Particle from "./component/Particle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
       >
         <CustomCursor />
         {children}
+        <Particle />
       </body>
     </html>
   );
