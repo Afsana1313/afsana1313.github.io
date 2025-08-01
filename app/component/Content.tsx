@@ -1,6 +1,6 @@
 import React from "react";
 import Experience from "./Experience";
-
+import MobileStickyHeader from "./MobileStickyHeader";
 const Content = () => {
   return (
     <>
@@ -9,6 +9,8 @@ const Content = () => {
         className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
         aria-label="About Me"
       >
+        {" "}
+        <MobileStickyHeader title={"About Me"} />
         Assalamu Alaikum, I’m a passionate and detail-oriented Software
         Developer based in Dhaka, Bangladesh. I specialize in crafting
         efficient, scalable, and interactive web applications using JavaScript,
@@ -31,6 +33,8 @@ const Content = () => {
         className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
         aria-label="Experience"
       >
+        {" "}
+        <MobileStickyHeader title={"Experience"} />
         <Experience />
       </section>
       <section
@@ -38,6 +42,7 @@ const Content = () => {
         className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
         aria-label="Projects"
       >
+        <MobileStickyHeader title={"Projects"} />
         Apple Developed and styled interactive web apps for Apple Music,
         including the user interface of Apple Music’s embeddable web player
         widget for in-browser user authorization and full song playback.

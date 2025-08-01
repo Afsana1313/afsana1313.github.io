@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-bg: #f8f9f0;
 }
 
 @theme inline {
@@ -25,12 +26,15 @@
 }
 body {
   /* background: var(--background); */
-  background-color: #f8f9f0;
+  background-color: var(--primary-bg);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 .left-container {
   color: black;
+}
+.bg-primary {
+  background-color: var(--primary-bg);
 }
 .right-container {
   color: black;
