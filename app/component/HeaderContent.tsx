@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import intro from "../content/Intro";
 
 const navMenu = ["about", "experience", "projects"];
@@ -30,15 +30,31 @@ const HeaderContent = () => {
 const NavContent = () => {
   const [activeMenu, setActiveMenu] = useState("about");
   const handleUserClick = (e: React.MouseEvent<HTMLElement>) => {
-    const value = (e.target as HTMLElement).getAttribute("data-value");
-    console.log(activeMenu, value);
     setActiveMenu(e.currentTarget.getAttribute("data-value") as string);
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      for (const id of navMenu) {
+        const section = document.getElementById(id);
+        if (!section) continue;
 
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          setActiveMenu(id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Set initial value
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return navMenu.map((item) => {
     return (
-      <li key={item} onClick={handleUserClick} data-value={`${item}`}>
-        <a className="group flex items-center py-3 active" href={`#${item}`}>
+      <li key={item} onClick={handleUserClick} data-value={item}>
+        <a className="group flex items-center py-3 active" href={item}>
           <span
             className={`${
               activeMenu == item && "w-16"
