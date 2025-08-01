@@ -4,10 +4,10 @@ import experience from "../content/Experience";
 const Experience = () => {
   return (
     <>
-      <ol className="group/list">
+      <ol>
         {experience.map((item) => (
           <li className="mb-12" key={item.title}>
-            <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 hover:shadow-md duration-300 p-6 rounded-md">
+            <div className="relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 hover:shadow-md duration-300 p-6 rounded-md">
               <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block "></div>
               <header
                 className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"

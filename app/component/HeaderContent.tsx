@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import intro from "../content/Intro";
+import SocialMediaContainer from "./SocialMediaContainer";
 
 const navMenu = ["about", "experience", "projects"];
 
@@ -23,6 +24,7 @@ const HeaderContent = () => {
           </nav>
         </div>
       </div>
+      <SocialMediaContainer />
     </header>
   );
 };

@@ -33,8 +33,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased transition-all `}
       >
-        <CustomCursor />
-        {children}
+        <div className="relative z-10">
+          <CustomCursor />
+          {children}
+        </div>
         <Particle />
       </body>
     </html>
