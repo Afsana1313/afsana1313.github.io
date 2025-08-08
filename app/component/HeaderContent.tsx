@@ -56,7 +56,7 @@ const NavContent = () => {
   return navMenu.map((item) => {
     return (
       <li key={item} onClick={handleUserClick} data-value={item}>
-        <a className="group flex items-center py-3 active" href={item}>
+        <a className="group flex items-center py-3 active" href={`#${item}`}>
           <span
             className={`${
               activeMenu == item && "w-16"

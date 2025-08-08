@@ -9,7 +9,6 @@ const Content = () => {
         className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
         aria-label="About Me"
       >
-        {" "}
         <MobileStickyHeader title={"About Me"} />
         Assalamu Alaikum, I’m a passionate and detail-oriented Software
         Developer based in Dhaka, Bangladesh. I specialize in crafting
