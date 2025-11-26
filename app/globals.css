@@ -29,6 +29,7 @@ body {
   background-color: var(--primary-bg);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 .left-container {
   color: black;

@@ -1,6 +1,7 @@
 import React from "react";
 import Experience from "./Experience";
 import MobileStickyHeader from "./MobileStickyHeader";
+import Carousal from "./Carousal";
 const Content = () => {
   return (
     <>
@@ -42,35 +43,15 @@ const Content = () => {
         aria-label="Projects"
       >
         <MobileStickyHeader title={"Projects"} />
-        Apple Developed and styled interactive web apps for Apple Music,
-        including the user interface of Apple Music’s embeddable web player
-        widget for in-browser user authorization and full song playback.
-        MusicKit.js 9to5Mac The Verge Ember SCSS JavaScript MusicKit.js 2016 —
-        2017 Developer · Scout Studio Collaborated with other student designers
-        and engineers on pro-bono projects to create new brands, design systems,
-        and websites for organizations in the community. Jekyll SCSS JavaScript
-        WordPress July — Dec 2016 Software Engineer Co-op · Starry Worked with
-        the UI team to engineer and improve major features of Starry’s
-        customer-facing Android app. Android App ScreenTime 2.0 Cordova Backbone
-        JavaScript CSS July — Dec 2015 Creative Technologist Co-op · MullenLowe
-        U.S. Developed, maintained, and shipped production code for client
-        websites. Clients included JetBlue, Lovesac, U.S. Cellular, U.S.
-        Department of Defense, and more. HTML CSS JavaScript jQuery View Full
-        Résumé Projects Apple Developed and styled interactive web apps for
-        Apple Music, including the user interface of Apple Music’s embeddable
-        web player widget for in-browser user authorization and full song
-        playback. MusicKit.js 9to5Mac The Verge Ember SCSS JavaScript
-        MusicKit.js 2016 — 2017 Developer · Scout Studio Collaborated with other
-        student designers and engineers on pro-bono projects to create new
-        brands, design systems, and websites for organizations in the community.
-        Jekyll SCSS JavaScript WordPress July — Dec 2016 Software Engineer Co-op
-        · Starry Worked with the UI team to engineer and improve major features
-        of Starry’s customer-facing Android app. Android App ScreenTime 2.0
-        Cordova Backbone JavaScript CSS July — Dec 2015 Creative Technologist
-        Co-op · MullenLowe U.S. Developed, maintained, and shipped production
-        code for client websites. Clients included JetBlue, Lovesac, U.S.
-        Cellular, U.S. Department of Defense, and more. HTML CSS JavaScript
-        jQuery View Full Résumé Projects
+        <Carousal
+          title=""
+          href={"https://wollito.vercel.app/#/dashboard"}
+          description={
+            "Wollito is a modern personal finance web app designed to help users track expenses, set budgets, and understand their spending habits effortlessly. The prototype showcases clean dashboards, category-wise analytics, and an intuitive interface that makes money management simple and visual."
+          }
+          imageSrc={"https://wollito.vercel.app/assets/logo-uIF5Yud8.png"}
+          imageAlt={"Wollito"}
+        />
       </section>
     </>
   );

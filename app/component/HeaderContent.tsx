@@ -31,9 +31,7 @@ const HeaderContent = () => {
 
 const NavContent = () => {
   const [activeMenu, setActiveMenu] = useState("about");
-  const handleUserClick = (e: React.MouseEvent<HTMLElement>) => {
-    setActiveMenu(e.currentTarget.getAttribute("data-value") as string);
-  };
+
   useEffect(() => {
     const handleScroll = () => {
       for (const id of navMenu) {
@@ -53,9 +51,10 @@ const NavContent = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return navMenu.map((item) => {
     return (
-      <li key={item} onClick={handleUserClick} data-value={item}>
+      <li key={item} data-value={item}>
         <a className="group flex items-center py-3 active" href={`#${item}`}>
           <span
             className={`${
