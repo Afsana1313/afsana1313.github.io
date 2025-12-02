@@ -2,6 +2,7 @@ import React from "react";
 import Experience from "./Experience";
 import MobileStickyHeader from "./MobileStickyHeader";
 import Carousal from "./Carousal";
+import rentaroom from "./../assets/rentaroom.svg";
 const Content = () => {
   return (
     <>
@@ -44,7 +45,16 @@ const Content = () => {
       >
         <MobileStickyHeader title={"Projects"} />
         <Carousal
-          title=""
+          title="Rent A Room"
+          href={"https://rentroom-two.vercel.app/"}
+          description={
+            "Developed a responsive Airbnb-style room rental frontend using React.js and Next.js, featuring dynamic listings, modern UI components, and seamless user navigation."
+          }
+          imageSrc={"/rentaroom.svg"}
+          imageAlt={"Rent A Room"}
+        />
+        <Carousal
+          title="Wollito"
           href={"https://wollito.vercel.app/#/dashboard"}
           description={
             "Wollito is a modern personal finance web app designed to help users track expenses, set budgets, and understand their spending habits effortlessly. The prototype showcases clean dashboards, category-wise analytics, and an intuitive interface that makes money management simple and visual."
