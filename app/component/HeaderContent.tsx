@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import intro from "../content/Intro";
 import SocialMediaContainer from "./SocialMediaContainer";
+import DownloadCv from "./DownloadCv";
 
 const navMenu = ["about", "experience", "projects"];
 
@@ -22,6 +23,7 @@ const HeaderContent = () => {
               <NavContent />
             </ul>
           </nav>
+          <DownloadCv />
         </div>
       </div>
       <SocialMediaContainer />
