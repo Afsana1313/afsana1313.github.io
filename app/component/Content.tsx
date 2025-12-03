@@ -2,7 +2,7 @@ import React from "react";
 import Experience from "./Experience";
 import MobileStickyHeader from "./MobileStickyHeader";
 import Carousal from "./Carousal";
-import rentaroom from "./../assets/rentaroom.svg";
+
 const Content = () => {
   return (
     <>
@@ -52,6 +52,17 @@ const Content = () => {
           }
           imageSrc={"/rentaroom.svg"}
           imageAlt={"Rent A Room"}
+          skills={["Nextjs", "Typescript", "Tailwind Css"]}
+        />
+        <Carousal
+          title="Animated Island"
+          href={"https://island-delta-puce.vercel.app/"}
+          description={
+            "Designed and implemented a fully animated 3D island using Three.js. Optimized performance for web-based interactivity, including dynamic lighting, animations, and user-driven exploration features."
+          }
+          imageSrc={"/island.png"}
+          imageAlt={"Animated Island"}
+          skills={["Threejs"]}
         />
         <Carousal
           title="Wollito"
@@ -61,6 +72,7 @@ const Content = () => {
           }
           imageSrc={"https://wollito.vercel.app/assets/logo-uIF5Yud8.png"}
           imageAlt={"Wollito"}
+          skills={["Reactjs", "Typescript", "Bootstrap CSS"]}
         />
       </section>
     </>
