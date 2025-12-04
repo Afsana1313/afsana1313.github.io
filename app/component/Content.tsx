@@ -52,7 +52,7 @@ const Content = () => {
           }
           imageSrc={"/rent-a-room-ss.png"}
           imageAlt={"Rent A Room"}
-          skills={["Nextjs", "Typescript", "Tailwind Css"]}
+          skills={["Nextjs", "Typescript", "Tailwind Css", "Zustand"]}
         />
         <Carousal
           title="Animated Island"
