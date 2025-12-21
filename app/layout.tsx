@@ -65,7 +65,8 @@ export default function RootLayout({
               "https://github.com/Afsana1313",
               "https://www.linkedin.com/in/afsana-zaman-nipa/",
               "https://scholar.google.com/citations?view_op=list_works&hl=en&user=4iXSB-IAAAAJ",
-              "https://medium.com/@afsana2013nipa"
+              "https://medium.com/@afsana2013nipa",
+              "https://www.facebook.com/n.afsana.zaman/"
             ],
             jobTitle: "Software Developer",
             worksFor: {
