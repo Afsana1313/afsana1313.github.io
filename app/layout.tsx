@@ -53,29 +53,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Afsana Zaman Nipa",
-            url: "https://afsana1313.github.io/",
-            sameAs: [
-              "https://github.com/Afsana1313",
-              "https://www.linkedin.com/in/afsana-zaman-nipa/",
-              "https://scholar.google.com/citations?view_op=list_works&hl=en&user=4iXSB-IAAAAJ",
-              "https://medium.com/@afsana2013nipa",
-              "https://www.facebook.com/n.afsana.zaman/"
-            ],
-            jobTitle: "Software Developer",
-            worksFor: {
-              "@type": "Organization",
-              name: "Independent / Open Source"
-            }
-          })
-        }}
-      />
+      <head>
+        {" "}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Afsana Zaman Nipa",
+              url: "https://afsana1313.github.io/",
+              sameAs: [
+                "https://github.com/Afsana1313",
+                "https://www.linkedin.com/in/afsana-zaman-nipa/",
+                "https://scholar.google.com/citations?view_op=list_works&hl=en&user=4iXSB-IAAAAJ",
+                "https://medium.com/@afsana2013nipa",
+                "https://www.facebook.com/n.afsana.zaman/"
+              ],
+              jobTitle: "Software Developer",
+              worksFor: {
+                "@type": "Organization",
+                name: "Independent / Open Source"
+              }
+            })
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased transition-all `}
       >
