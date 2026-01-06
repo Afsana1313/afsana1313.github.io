@@ -1,5 +1,44 @@
 const experience = [
   {
+    title: "Freelance Software Developer (Full Stack)",
+    start: "2023-04",
+    end: "Ongoing",
+    skills: [
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "Docker",
+      "Jest",
+      "JavaScript",
+      "TypeScript",
+      "GraphQL",
+      "REST API",
+      "Git"
+    ],
+    description: `Designed and developed a scalable file management system on GCP, enabling users to upload, organize,
+and share files efficiently, leveraging Cloud Storage to optimize performance and reliability. Contributed to the development of a multi-platform healthcare marketplace (web and mobile), imple- menting vendor and clinic-facing user interfaces with payment gateway integration, SEO optimization, and accessibility (a11y) best practices. `
+  },
+  {
+    title: "Software Developer",
+    company: "AINIX IT",
+    start: "2023-01",
+    end: "2023-04",
+    skills: [
+      "React.js",
+      "Next.js",
+      "JavaScript",
+      "TypeScript",
+      "GraphQL",
+      "REST API",
+      "Git"
+    ],
+    description: `
+      Developed responsive and pixel-perfect UIs based on Figma designs using React.js, Next.js, and Type-
+Script. Integrated GraphQL, REST, and Connect-Web APIs to enable dynamic, scalable data fetching.
+    `
+  },
+  {
     title: "Software Developer",
     company: "Cloud Production LTD",
     start: "2022-04",

@@ -1,7 +1,8 @@
 const intro = {
   title: "Afsana Zaman",
-  tagLine: "Front End Developer",
-  shortBio: "I build accessible, pixel-perfect digital experiences for the web."
+  tagLine: "Software Developer",
+  shortBio:
+    "I build scalable, user-focused web applications with clean code and modern technologies."
 };
 
 export default intro;
